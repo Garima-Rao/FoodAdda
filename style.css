@@ -1,0 +1,238 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+scroll-behavior: smooth;
+}
+
+/* ######## LOGO ########## */
+
+#header{
+    position: fixed;
+     text-shadow: 3px 3px rgb(217, 255, 0);
+     animation-name: move;
+     animation-duration: 5s;
+     animation-iteration-count: 1;
+} 
+  @keyframes move {
+     from{
+        transform: rotate(180deg);
+    }
+    to{
+         transform: rotate(360deg);
+    } 
+}
+
+
+
+/*############ NAVIGATION SECTION ###############*/
+/*navigation bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+/*Navigation Bar :logo*/
+#logo{
+margin:10px 15px;
+}
+/*Navigation Bar:image*/
+#logo img{
+    height:35px;
+   
+}
+/*Navigation Bar :list styling*/
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    content:"";
+    /*maine yaha pr content:""kiya tabhi mera background color ar other property effect me aayi pta nhi kyu?*/
+    background-color:black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+
+}
+#navbar ul{
+    display: flex;
+    font-family: 'baloo bhai',cursive;
+}
+   #navbar ul li{
+    /*color:white krne pr li ke dot ka color white ho rha tha isliye maine use 'a' me color:white kiya tb nav bar ka color white ho gya*/
+       list-style-type:none;  
+    
+       font-size: 1.1rem;
+     /* maine yaha pr text-decoration none kiya tha lekin koi effect nahi aaya isliye 'a' me ise use kiya ar effect dikha*/  
+    }
+    #navbar ul li a{
+        display: block;
+        padding: 3px 20px;
+        text-decoration: none;
+       color: white;
+       border-radius: 20px;
+    }
+    #navbar ul li a:hover{
+       color:black;
+       background-color: white;
+    }
+    /* ################ HOME SECTION ##############*/
+    #home{
+        display:flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+    #home::before{
+        content:"";
+        position: absolute;
+        background: url('../images/Screenshot\ \(25\).png' )no-repeat center center/cover;
+        height: 642px;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.65;
+    
+    }
+    #home h1{
+        text-align: center;
+        font-family: 'Bree Serif',serif;
+        margin: 17px;
+    }
+    #home p{
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .btn{
+        padding: 6px 20px;
+        border: 2px solid black;
+        background-color: aquamarine;
+        margin: 40px;
+        border-radius:10px;
+        color: black;
+        cursor: pointer;
+    }
+    
+/* ########### UTILITY CLASSES ########### */
+.header2{
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 100px;
+    margin-bottom: 50px;
+}
+#services{
+    display: flex;
+   margin: 10px;
+}
+#services .box{
+   border: 2px solid brown;
+   padding: 30px;
+   margin: -15px 5px;
+   border-radius: 28px;
+   background: #f2f2f2;
+   margin-bottom: 20px;
+}
+#services .box img{
+    height: 140px;
+    display: block;
+    margin: auto;
+}
+#services .box p{
+    font-family:'bree serif',serif;
+    display:flex;
+    text-align: center;
+}
+#services .box h2{
+display:flex;
+justify-content: center;
+}
+/* ############# CLIENTS SECTION ############# */
+.client-section{
+    height: 370px;
+}
+.client-section::before{
+    content: "";
+    position: absolute;
+    background: url(../images/Screenshot\ \(25\).png);
+    width: 100%;
+    height: 54%;
+    z-index: -1;
+    opacity: 0.6;
+}
+.client-section h1{
+text-align: center;
+font-size: 2.8rem;
+margin: 25px;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+#clients img{
+   height: 160px;
+}
+.client-item{
+    padding: 60px;
+}
+
+/* ################ CONTACT SECTION ################ */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    background: url(../images/Screenshot\ \(26\).png)center center/cover;
+}
+#contact h1{
+    text-align: center;
+    font-size: 2.8rem;
+   margin: 30px;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:34px;
+    color: red;
+}
+#contact-box form{
+  width: 40%;
+}
+.form-group{
+    font-size: 1.3rem;
+}
+ .form-group1 input{
+    color: blue;
+    margin-left: 1%;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+}
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    display: flex;
+    justify-content: center;
+}
